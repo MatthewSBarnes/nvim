@@ -23,7 +23,7 @@ require("lazy").setup({
 
 	-- Theme Plugins --
 	{ "bluz71/vim-nightfly-colors", name = "nightfly", lazy = false },
-	{ 'NLKNguyen/papercolor-theme' },
+	{ "NLKNguyen/papercolor-theme", name = "papercolor" },
 })
 
 --- Plugin Settings ---
