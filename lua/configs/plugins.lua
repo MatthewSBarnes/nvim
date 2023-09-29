@@ -13,6 +13,7 @@ vim.opt.rtp:prepend(lazypath)
 
 --- Plugins Here ---
 require("lazy").setup({
+	{ "airblade/vim-gitgutter" },
 	{ "dracula/vim", name = "dracula", lazy=true },
 	{ "itchyny/lightline.vim" },
 	{ "itchyny/vim-gitbranch" },
