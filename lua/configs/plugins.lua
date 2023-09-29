@@ -14,16 +14,28 @@ vim.opt.rtp:prepend(lazypath)
 --- Plugins Here ---
 require("lazy").setup({
 	{ "dracula/vim", name = "dracula", lazy=true },
+	{ "itchyny/lightline.vim" },
+	{ "itchyny/vim-gitbranch" },
 	{ "junegunn/fzf", name = "fzf", build = "./install --all" },
 	{ "junegunn/fzf.vim" },
-	{ "vim-airline/vim-airline" },
-	{ "vim-airline/vim-airline-themes" },
+	{ "tpope/vim-fugitive" }
 })
 
---- Plugin Settings ---
---- Airline Config --- 
-vim.g.airline_powerline_fonts = 1
-vim.g.airline_solarized_bg = 'dark'
+------ Plugin Settings ------
+--- Lightline Config ---
+vim.g.lightline = {
+	colorscheme = "wombat",
+	active = {
+		left = {
+			{ 'mode' }, 
+			{ 'filename' },
+			{ 'gitbranch' }
+		}
+	},
+	component_function = {
+		gitbranch = 'gitbranch#name'
+	}
+}
 
 --- Dracula Config ---
 vim.cmd("colorscheme dracula")
