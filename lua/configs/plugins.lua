@@ -13,17 +13,21 @@ vim.opt.rtp:prepend(lazypath)
 
 --- Plugins Here ---
 require("lazy").setup({
+	-- App Plugins --
 	{ "airblade/vim-gitgutter" },
-	{ "dracula/vim", name = "dracula", lazy=true },
 	{ "itchyny/lightline.vim" },
 	{ "itchyny/vim-gitbranch" },
 	{ "junegunn/fzf", name = "fzf", build = "./install --all" },
 	{ "junegunn/fzf.vim" },
-	{ "tpope/vim-fugitive" }
+	{ "tpope/vim-fugitive" },
+
+	-- Theme Plugins --
+	{ "bluz71/vim-nightfly-colors", name = "nightfly", lazy = false },
+	{ 'NLKNguyen/papercolor-theme' },
 })
 
------- Plugin Settings ------
---- Lightline Config ---
+--- Plugin Settings ---
+-- Lightline Config --
 vim.g.lightline = {
 	colorscheme = "wombat",
 	active = {
@@ -38,5 +42,5 @@ vim.g.lightline = {
 	}
 }
 
---- Dracula Config ---
-vim.cmd("colorscheme dracula")
+-- Theme Config --
+vim.cmd("colorscheme nightfly")

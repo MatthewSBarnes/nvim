@@ -7,5 +7,6 @@ vim.opt.relativenumber = true
 vim.opt.shiftwidth = 2
 vim.opt.smartcase = true
 vim.opt.tabstop = 2
+vim.opt.termguicolors = true
 vim.opt.wrap = true
 
