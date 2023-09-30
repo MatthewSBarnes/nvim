@@ -10,6 +10,7 @@ require("lazy").setup({
 	{ "neovim/nvim-lspconfig"},
 	{ "tpope/vim-fugitive" },
 	{ "williamboman/mason.nvim" },
+	{ "williamboman/mason-lspconfig.nvim" },
 
 	-- Theme Plugins --
 	{ "bluz71/vim-nightfly-colors", name = "nightfly", lazy = false },
@@ -40,9 +41,6 @@ vim.g.lightline = {
 }
 
 require('gitsigns').setup()
-require("mason").setup{
-	ensure_installed = { "pyright", "rust_analyzer", "solargraph"}
-}
 
 -- Theme Config --
 vim.cmd("colorscheme nightfly")
