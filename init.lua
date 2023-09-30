@@ -16,6 +16,9 @@ vim.opt.rtp:prepend(lazypath)
 require('configs.settings')
 require('configs.keymaps')
 require('configs.plugins')
+
+require('lsp.mason')
 require('lsp.lsp_config')
 require('lsp.auto_complete')
+
 
