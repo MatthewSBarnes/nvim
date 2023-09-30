@@ -1,29 +1,26 @@
-local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-if not vim.loop.fs_stat(lazypath) then
-  vim.fn.system({
-    "git",
-    "clone",
-    "--filter=blob:none",
-    "https://github.com/folke/lazy.nvim.git",
-    "--branch=stable", -- latest stable release
-    lazypath,
-  })
-end
-vim.opt.rtp:prepend(lazypath)
-
 --- Plugins Here ---
 require("lazy").setup({
+
 	-- App Plugins --
-	{ "airblade/vim-gitgutter" },
 	{ "itchyny/lightline.vim" },
 	{ "itchyny/vim-gitbranch" },
 	{ "junegunn/fzf", name = "fzf", build = "./install --all" },
 	{ "junegunn/fzf.vim" },
+	{ "lewis6991/gitsigns.nvim" },
+	{ "neovim/nvim-lspconfig"},
 	{ "tpope/vim-fugitive" },
+	{ "williamboman/mason.nvim" },
 
 	-- Theme Plugins --
 	{ "bluz71/vim-nightfly-colors", name = "nightfly", lazy = false },
 	{ "NLKNguyen/papercolor-theme", name = "papercolor" },
+
+	-- Autocomplete Plugins --
+	{ 'hrsh7th/nvim-cmp' },
+	{ 'hrsh7th/cmp-nvim-lsp' },
+	{ 'saadparwaiz1/cmp_luasnip' },
+	{ 'L3MON4D3/LuaSnip' },
+
 })
 
 --- Plugin Settings ---
@@ -41,6 +38,9 @@ vim.g.lightline = {
 		gitbranch = 'gitbranch#name'
 	}
 }
+
+require('gitsigns').setup()
+require("mason").setup()
 
 -- Theme Config --
 vim.cmd("colorscheme nightfly")
