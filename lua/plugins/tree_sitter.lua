@@ -7,9 +7,14 @@ return {
                 ensure_installed = {
                     "python",
                     "rust",
-                    "ruby"
+                    "ruby",
+                    "json",
+                    "css"
                 },
-                auto_install = true
+                auto_install = true,
+                autotag = {
+                    enable = true,
+                },
             }
         end
     }

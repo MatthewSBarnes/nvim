@@ -1,13 +1,14 @@
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 local lspconfig = require('lspconfig') 
+local cmp_autopairs = require('nvim-autopairs.completion.cmp')
+local cmp = require 'cmp'
+local luasnip = require 'luasnip'
 
 -- Add additional capabilities supported by nvim-cmp
 -- luasnip setup
-local luasnip = require 'luasnip'
 luasnip.config.setup {}
 
 -- nvim-cmp setup
-local cmp = require 'cmp'
 cmp.setup {
   snippet = {
     expand = function(args)
@@ -47,3 +48,7 @@ cmp.setup {
     { name = 'luasnip' },
   },
 }
+cmp.event:on(
+  'confirm_done',
+  cmp_autopairs.on_confirm_done()
+)
