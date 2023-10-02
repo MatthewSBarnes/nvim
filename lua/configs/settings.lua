@@ -1,3 +1,4 @@
+vim.diagnostic.open_float()
 vim.g.netrw_winsize = 25
 vim.opt.cursorcolumn = true
 vim.opt.cursorline = true
