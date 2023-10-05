@@ -10,7 +10,7 @@ vim.keymap.set('n', '<Leader>b', ':b#<Cr>', { desc = "Goto Previous Buffer" })
 vim.keymap.set('n', '<Leader>q', ':q<Cr>', { desc = "Quit Buffer" })
 vim.keymap.set('n', '<Leader>t', ':terminal<Cr>', { desc = "Terminal" })
 vim.keymap.set('n', '<Leader>w', ':write<Cr>', { desc = "Write Buffer" })
-
+vim.keymap.set('n', '<Leader>o', ':Oil<Cr>', { desc = "Open Filesystem"})
 vim.keymap.set('n', '<Leader>?', ':WhichKey<Cr>', { desc = "Which Key" })
 
 vim.keymap.set("t", "<esc><esc>", "<c-\\><c-n>", { desc = "Escape Terminal Mode" })

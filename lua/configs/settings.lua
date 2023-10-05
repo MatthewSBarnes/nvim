@@ -2,6 +2,7 @@ vim.diagnostic.open_float()
 vim.g.netrw_winsize = 25
 vim.opt.cursorcolumn = true
 vim.opt.cursorline = true
+vim.opt.expandtab = true
 vim.opt.hlsearch = true
 vim.opt.mouse = 'i'
 vim.opt.number = true
